@@ -32,12 +32,26 @@
     <None Include="openssl.cnf">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\server.crt" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\server.csr" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\server.key" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.crt" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.key" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.srl" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.key">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.csr">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.crt">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.srl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.key">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.crt">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
