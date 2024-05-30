@@ -34,10 +34,6 @@ void initialize_openssl() {
 	OpenSSL_add_ssl_algorithms();
 }
 
-void cleanup_openssl() {
-	EVP_cleanup();
-}
-
 SSL_CTX* create_context() {
 	const SSL_METHOD* method;
 	SSL_CTX* ctx;
@@ -148,7 +144,6 @@ int main() {
 
 	closesocket(server_fd);
 	SSL_CTX_free(ctx);
-	cleanup_openssl();
 	cleanup_winsock();
 
 	return 0;
