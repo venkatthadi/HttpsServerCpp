@@ -26,13 +26,13 @@
     <None Include="..\HttpsServerGit\localhost.key">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext">
+      <Filter>Source Files</Filter>
+    </None>
     <None Include="..\..\..\OneDrive\Desktop\Certs\server.crt">
       <Filter>Source Files</Filter>
     </None>
     <None Include="..\..\..\OneDrive\Desktop\Certs\server.key">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
