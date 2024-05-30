@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <iostream>
 #include <thread>
 #include <winsock2.h>
@@ -5,6 +7,7 @@
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 #include <openssl/crypto.h>
+#include <openssl/applink.c>
 
 using namespace std;
 
@@ -13,7 +16,7 @@ using namespace std;
 #pragma comment(lib, "libcrypto.lib")
 
 #define PORT "4433"
-#define CERT_FILE "server2.crt"
+#define CERT_FILE "server.crt"
 #define KEY_FILE "server.key"
 
 void initialize_winsock() {
@@ -51,23 +54,15 @@ SSL_CTX* create_context() {
 void configure_context(SSL_CTX* ctx) {
 	SSL_CTX_set_ecdh_auto(ctx, 1);
 
-	if (SSL_CTX_use_certificate_file(ctx, CERT_FILE, SSL_FILETYPE_PEM) <= 0) {
+	if (SSL_CTX_use_certificate_file(ctx, "C:\\Users\\user\\OneDrive\\Desktop\\Certs\\server.crt", SSL_FILETYPE_PEM) <= 0) {
 		ERR_print_errors_fp(stderr);
 		exit(EXIT_FAILURE);
 	}
 
-	if (SSL_CTX_use_PrivateKey_file(ctx, KEY_FILE, SSL_FILETYPE_PEM) <= 0) {
+	if (SSL_CTX_use_PrivateKey_file(ctx, "C:\\Users\\user\\OneDrive\\Desktop\\Certs\\server.key", SSL_FILETYPE_PEM) <= 0) {
 		ERR_print_errors_fp(stderr);
 		exit(EXIT_FAILURE);
 	}
-
-	if (SSL_CTX_load_verify_locations(ctx, "rootCA.pem", nullptr) <= 0) {
-		ERR_print_errors_fp(stderr);
-		exit(EXIT_FAILURE);
-	}
-
-	SSL_CTX_set_verify(ctx, SSL_VERIFY_PEER | SSL_VERIFY_FAIL_IF_NO_PEER_CERT, nullptr);
-	SSL_CTX_set_verify_depth(ctx, 4);
 }
 
 void handle_client(SSL* ssl) {
