@@ -32,5 +32,12 @@
     <None Include="openssl.cnf">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.crt" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.csr" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.key" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.crt" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.key" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.srl" />
   </ItemGroup>
 </Project>

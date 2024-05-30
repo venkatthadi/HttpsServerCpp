@@ -132,6 +132,13 @@
     <ClCompile Include="HttpsServer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.crt" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.key" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.srl" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.crt" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.csr" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.key" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext" />
     <None Include="localhost.crt" />
     <None Include="localhost.csr" />
     <None Include="localhost.key" />

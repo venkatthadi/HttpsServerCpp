@@ -13,8 +13,8 @@ using namespace std;
 #pragma comment(lib, "libcrypto.lib")
 
 #define PORT "4433"
-#define CERT_FILE "localhost.crt"
-#define KEY_FILE "localhost.key"
+#define CERT_FILE "server.crt"
+#define KEY_FILE "server.key"
 
 void initialize_winsock() {
 	WSADATA wsadata;
