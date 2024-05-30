@@ -13,7 +13,7 @@ using namespace std;
 #pragma comment(lib, "libcrypto.lib")
 
 #define PORT "4433"
-#define CERT_FILE "server.crt"
+#define CERT_FILE "server2.crt"
 #define KEY_FILE "server.key"
 
 void initialize_winsock() {
@@ -60,6 +60,14 @@ void configure_context(SSL_CTX* ctx) {
 		ERR_print_errors_fp(stderr);
 		exit(EXIT_FAILURE);
 	}
+
+	if (SSL_CTX_load_verify_locations(ctx, "rootCA.pem", nullptr) <= 0) {
+		ERR_print_errors_fp(stderr);
+		exit(EXIT_FAILURE);
+	}
+
+	SSL_CTX_set_verify(ctx, SSL_VERIFY_PEER | SSL_VERIFY_FAIL_IF_NO_PEER_CERT, nullptr);
+	SSL_CTX_set_verify_depth(ctx, 4);
 }
 
 void handle_client(SSL* ssl) {

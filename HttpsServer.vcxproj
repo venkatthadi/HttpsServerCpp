@@ -18,6 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.crt" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.key" />
+    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext" />
+    <None Include="..\HttpsServerGit\localhost.crt" />
+    <None Include="..\HttpsServerGit\localhost.csr" />
+    <None Include="..\HttpsServerGit\localhost.key" />
+    <None Include="..\HttpsServerGit\openssl.cnf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\HttpsServerGit\HttpsServer.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -104,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Program Files\OpenSSL-Win64\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\OpenSSL-Win64\include; C:\Users\user\Downloads</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,22 +140,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="HttpsServer.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.crt" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.key" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.srl" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\server.crt" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\server.csr" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\server.key" />
-    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext" />
-    <None Include="localhost.crt" />
-    <None Include="localhost.csr" />
-    <None Include="localhost.key" />
-    <None Include="openssl.cnf" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

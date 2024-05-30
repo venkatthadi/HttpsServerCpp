@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
@@ -13,45 +9,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{eac5357a-f1c0-44f8-ae11-79c4837f7b9a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HttpsServer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="localhost.key">
+    <None Include="..\HttpsServerGit\openssl.cnf">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="localhost.crt">
+    <None Include="..\HttpsServerGit\localhost.crt">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="localhost.csr">
+    <None Include="..\HttpsServerGit\localhost.csr">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="openssl.cnf">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\server.key">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\server.csr">
+    <None Include="..\HttpsServerGit\localhost.key">
       <Filter>Source Files</Filter>
     </None>
     <None Include="..\..\..\OneDrive\Desktop\Certs\server.crt">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.srl">
+    <None Include="..\..\..\OneDrive\Desktop\Certs\server.key">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.key">
+    <None Include="..\..\..\OneDrive\Desktop\Certs\v3.ext">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="..\..\..\OneDrive\Desktop\Certs\rootCA.crt">
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\HttpsServerGit\HttpsServer.cpp">
       <Filter>Source Files</Filter>
-    </None>
+    </ClCompile>
   </ItemGroup>
 </Project>
